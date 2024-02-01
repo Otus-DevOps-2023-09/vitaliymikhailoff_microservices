@@ -1,0 +1,7 @@
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+vitaliymikhailoff/ubuntu-tmp-file   latest    7a4c493a5243   7 seconds ago   63.2MB
+ubuntu                              18.04     f9a80a55f492   7 months ago    63.2MB
+hello-world                         latest    d2c94e258dcb   8 months ago    13.3kB
+
+Контейнер и образ отличаются, например, наличием в контейнере сетевых настроек.
+В целом это две разные сущности, контейнер имеет возможность записи.
