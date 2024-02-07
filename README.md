@@ -25,3 +25,8 @@ vitaliymikhailoff microservices repository
 
 ### Основное задание:
 Имя образа создается из названия папки и имени образа, можно переопределить при помощи ключа -p.
+Изучена работа сетей Docker
+Запущен проект reddit в Docker в одной сети с назначенными alias
+Запущен проект reddit в Docker с использованием нескольких сетей с назначенными alias
+Установлен docker compose
+Написан docker-compose.yml для проекта reddit
