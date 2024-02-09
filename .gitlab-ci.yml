@@ -10,6 +10,14 @@ variables:
 before_script:
  - cd reddit
  - bundle install 
+ - gem 'sinatra', '~> 2.0.1' 
+ - gem 'haml' 
+ - gem 'bson_ext' 
+ - gem 'bcrypt' 
+ - gem 'puma' 
+ - gem 'mongo' 
+ - gem 'json' 
+ - gem 'rack-test' 
 
 build_job:
   stage: build
@@ -34,12 +42,5 @@ deploy_job:
     - echo 'Deploy'
 
 
-gem 'sinatra', '~> 2.0.1' 
-gem 'haml' 
-gem 'bson_ext' 
-gem 'bcrypt' 
-gem 'puma' 
-gem 'mongo' 
-gem 'json' 
-gem 'rack-test' 
+
 
