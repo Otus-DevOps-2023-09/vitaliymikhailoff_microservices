@@ -13,3 +13,12 @@ install_plugin Capistrano::Puma
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+
+gem 'sinatra', '~> 2.0.1' 
+gem 'haml' 
+gem 'bson_ext' 
+gem 'bcrypt' 
+gem 'puma' 
+gem 'mongo' 
+gem 'json' 
+gem 'rack-test' 
