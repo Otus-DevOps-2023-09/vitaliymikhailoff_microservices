@@ -41,3 +41,21 @@ vitaliymikhailoff microservices repository
 Репозиторй GitLab подключен как удаленный реп  
 Развернут и настроен раннер  
 Выполнены проверка и тестирование пайплайнов gitlab-ci  
+
+## Введение в мониторинг. Модели и принципы работы систем мониторинга  
+
+### Основное задание:  
+Развернута ВМ в YC  
+Установлен Docker на ВМ 
+Развернут Prometheus в docker  
+Протестирован функционал Prometheus  
+Создан отдельный образ Prometheus  
+Собраны образы проекта reddit через скрипты  
+Выполнен запуск проекта reddit и Prometheus через docker compose  
+Протестирован функционал метрик Prometheus с остановкой сервиса  
+Добавлен функционал node-exporter и протестирован  
+Запушены образы в docker hub  
+https://hub.docker.com/repository/docker/vitaliymikhailoff/prometheus/general  
+https://hub.docker.com/repository/docker/vitaliymikhailoff/post/general  
+https://hub.docker.com/repository/docker/vitaliymikhailoff/comment/general  
+https://hub.docker.com/repository/docker/vitaliymikhailoff/ui/general  
