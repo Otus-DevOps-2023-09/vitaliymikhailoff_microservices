@@ -59,3 +59,12 @@ https://hub.docker.com/repository/docker/vitaliymikhailoff/prometheus/general
 https://hub.docker.com/repository/docker/vitaliymikhailoff/post/general  
 https://hub.docker.com/repository/docker/vitaliymikhailoff/comment/general  
 https://hub.docker.com/repository/docker/vitaliymikhailoff/ui/general  
+
+
+## Введение в Kubernetes #1   
+
+### Основное задание:  
+Созданы деплоймент манифесты для приложений  
+Создана ВМ в yc  
+Развернут minikube (т.к. в методичке нет инструкции по развертке через kubeadm)  
+Созданы деплойменты приложений в minikube - статур Running  
