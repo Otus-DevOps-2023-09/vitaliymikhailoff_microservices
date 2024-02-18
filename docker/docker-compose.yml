@@ -9,25 +9,50 @@ services:
         aliases:
           - commentdb
           - postdb
+
   ui:
     build: ../src/ui
-    image: ${USER_NAME}/ui
+    image: ${USER_NAME}/ui:logging
     ports:
       - ${UI_PORT}/tcp
     networks:
       - front_net
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+        
   post:
     build: ../src/post-py
-    image: ${USER_NAME}/post
+    image: ${USER_NAME}/post:logging
     networks:
       - front_net
       - back_net
+    environment:
+      - POST_DATABASE_HOST=postdb
+      - POST_DATABASE=posts
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    depends_on:
+      - postdb
+    ports:
+      - "5000:5000"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
+
   comment:
     build: ../src/comment
-    image: ${USER_NAME}/comment
+    image: ${USER_NAME}/comment:logging
     networks:
       - front_net
       - back_net
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
 
   prometheus:
     image: ${USER_NAME}/prometheus:latest
