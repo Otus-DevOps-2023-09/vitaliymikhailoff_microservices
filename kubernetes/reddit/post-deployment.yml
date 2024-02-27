@@ -24,4 +24,4 @@ spec:
         name: post
         env:
         - name: POST_DATABASE_HOST
-          value: postdb
+          value: post-db
