@@ -1,0 +1,17 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ template "ui.fullname" . }}
+spec:
+  rules:
+  - host: reddit2.158.160.150.245.sslip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-{{ .Chart.Name }}
+            port:
+              number: {{ .Values.service.externalPort }}
